@@ -77,5 +77,9 @@ initialTodos.forEach((item) => {
   todosList.append(todo);
 });
 
-const newTodoValidator = new FormValidator(validationConfig, addTodoForm);
-newTodoValidator.enableValidation();
+const forms = document.querySelectorAll(".popup__form");
+
+forms.forEach((addTodoForm) => {
+  const newTodoValidator = new FormValidator(validationConfig, addTodoForm);
+  newTodoValidator.enableValidation();
+});

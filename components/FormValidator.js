@@ -4,8 +4,14 @@ class FormValidator {
     this._formEl = formEl;
     this._inputSelector = settings.inputSelector;
     this._errorClass = settings.errorClass;
-    this._inputErrorClass = settings._inputErrorClass;
-    this._inactiveButtonClass = settings._inactiveButtonClass;
+    this._inputErrorClass = settings.inputErrorClass;
+    this._inactiveButtonClass = settings.inactiveButtonClass;
+    this._inputList = Array.from(
+      this._formEl.querySelectorAll(this._inputSelector)
+    );
+    this._buttonEl = this._formEl.querySelector(
+      this._settings.submitButtonSelector
+    );
   }
   _showInputError = (inputElement, errorMessage) => {
     const errorElement = this._formEl.querySelector(
@@ -49,7 +55,7 @@ class FormValidator {
     this._toggleButtonState();
 
     this._inputList.forEach((inputElement) => {
-      this._inputElement.addEventListener("input", () => {
+      inputElement.addEventListener("input", () => {
         this._checkInputValidity(inputElement);
         this._toggleButtonState();
       });
