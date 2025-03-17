@@ -28,9 +28,6 @@ const generateTodo = (data) => {
 
   return todoElement;
 
-  // todoNameEl.textContent = data.name;
-  // todoCheckboxEl.checked = data.completed;
-
   // // Apply id and for attributes.
   // // The id will initially be undefined for new todos.
   // todoCheckboxEl.id = `todo-${data.id}`;

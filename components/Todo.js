@@ -49,7 +49,7 @@ class Todo {
 
     this._generateDateEl();
     this._generateCheckboxEl();
-    this._setEventListeners;
+    this._setEventListeners();
     return this._todoElement;
   }
 }
