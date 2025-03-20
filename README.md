@@ -1,17 +1,18 @@
 # Simple Todo App
 
-Give a brief description of the project here. Feel free to give it a different name.
+This project is a simple application that allows you to create checkboxes for any activity you desire.
 
 ## Functionality
 
-Give a more detailed explanation of the project and its functionality.
+This project currently has limited functionality but its a solid backbone for mayor UX improvements and features. It currently provides a checkbox with events that you can create through a form.
 
 ## Technology
 
-Give a description of the technologies and techniques used. Pictures, GIFs, or screenshots that detail the project features are recommended.
+This project involves JavaScript and implements object oriented programing! It contains methods, constructors, exports, imports, and, private clases. This allows it to have no duplicate code and facilitates a team of software engineers to work on it without name conflicts.
 
 ## Deployment
 
 This project is deployed on GitHub Pages:
 
 - ADD LINK HERE
+  https://gammy-code.github.io/se_project_todo-app/
