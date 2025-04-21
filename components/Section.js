@@ -1,4 +1,4 @@
-import { initialTodos } from "../utils/constants";
+// import { initialTodos } from "../utils/constants";
 
 class Section {
   constructor({ items, renderer, containerSelector }) {
