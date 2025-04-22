@@ -51,6 +51,7 @@ const addPopup = new PopupWithForm({
     const values = { name: inputValues.name, date, id };
     const todoElement = generateTodo(values);
     section.addItem(todoElement);
+    todoCounter.updateTotal(true);
     addPopup.close();
   },
 });
@@ -70,9 +71,7 @@ function handleCheck(completed) {
 }
 
 function handleDelete(completed) {
-  if (completed) {
-    todoCounter.updateCompleted(false);
-  }
+  todoCounter.delete(completed);
 }
 
 forms.forEach((formElement) => {

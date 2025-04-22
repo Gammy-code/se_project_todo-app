@@ -2,7 +2,6 @@ class Popup {
   constructor(popupSelector) {
     this._popupElement = document.querySelector(popupSelector);
     this._popupCloseBtn = this._popupElement.querySelector(".popup__close");
-    this._addTodoButton = document.querySelector(".button_action_add");
     this._handleEscapeClose = this._handleEscapeClose.bind(this);
   }
   open() {
@@ -24,10 +23,6 @@ class Popup {
       if (evt.target === this._popupElement) {
         this.close();
       }
-    });
-
-    this._addTodoButton.addEventListener("click", () => {
-      addPopup.open();
     });
   }
 

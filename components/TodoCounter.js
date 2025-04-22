@@ -4,8 +4,13 @@ class TodoCounter {
   constructor(todos, selector) {
     this._element = document.querySelector(selector);
     this._completed = todos.filter((todo) => todo.completed).length; // number of completed todos
-    this._total = todos.lenght; // the total number of todos
+    this._total = todos.length; // the total number of todos
     this._updateText();
+  }
+
+  delete(completed) {
+    this.updateCompleted(completed);
+    this.updateTotal(false);
   }
 
   // Call this when a checkbox is clicked, and when a completed
