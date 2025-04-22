@@ -8,10 +8,10 @@ class TodoCounter {
     this._updateText();
   }
 
-  delete(completed) {
-    this.updateCompleted(completed);
-    this.updateTotal(false);
-  }
+  // delete(completed) {
+  //   this.updateCompleted(completed);
+  //   this.updateTotal(false);
+  // }
 
   // Call this when a checkbox is clicked, and when a completed
   // to-do is deleted.
@@ -19,11 +19,12 @@ class TodoCounter {
     // if increment is true, add 1 to this._completed. Otherwise,
     // subtract 1. In either case, call the method to update
     // the text content.
-    if (increment) {
-      this._completed++;
-    } else {
-      this._completed--;
-    }
+    // if (increment) {
+    //   this._completed++;
+    // } else {
+    //   this._completed--;
+    // }
+    this._completed += increment ? 1 : -1;
     this._updateText();
   };
 
@@ -33,11 +34,12 @@ class TodoCounter {
     // if increment is true, add 1 to this._totalS. Otherwise,
     // subtract 1. In either case, call the method to update the
     // text content.
-    if (increment) {
-      this._total++;
-    } else {
-      this._total--;
-    }
+    // if (increment) {
+    //   this._total++;
+    // } else {
+    //   this._total--;
+    // }
+    this._total += increment ? 1 : -1;
     this._updateText();
   };
 

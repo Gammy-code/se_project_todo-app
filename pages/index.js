@@ -16,9 +16,9 @@ import TodoCounter from "../components/TodoCounter.js";
 
 const addTodoButton = document.querySelector(".button_action_add");
 const addTodoPopup = document.querySelector("#add-todo-popup");
-const addTodoForm = document.forms["add-todo-form"];
-const addTodoCloseBtn = addTodoPopup.querySelector(".popup__close");
-const todosList = document.querySelector(".todos__list");
+// const addTodoForm = document.forms["add-todo-form"];
+// const addTodoCloseBtn = addTodoPopup.querySelector(".popup__close");
+// const todosList = document.querySelector(".todos__list");
 const forms = document.querySelectorAll(".popup__form");
 
 // The logic in this function should all be handled in the Todo class.
@@ -71,7 +71,10 @@ function handleCheck(completed) {
 }
 
 function handleDelete(completed) {
-  todoCounter.delete(completed);
+  todoCounter.updateTotal(false);
+  if (completed) {
+    todoCounter.updateCompleted(false);
+  }
 }
 
 forms.forEach((formElement) => {
